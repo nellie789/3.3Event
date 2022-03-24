@@ -2,52 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Change Contents of an Element Notes</title>
 </head>
 <body>
-    <div id="parent">
-        <input type="text" id="text1"/>
-        <button id="button1">BUTTON</button>
-    </div>
-    <script>
-        console.log('Hello console! - line 13');
-
-        const inputElement = document.getElementById('text1');
-        const buttonElement = document.getElementById('button1');
-
-        inputElement.addEventListener('change', function(e){
-            console.log(`The value you entered is ${e.target.value}`);
-        })
-        inputElement.addEventListener('input', function(e){
-            console.log(`The value you just typed is ${e.target.value}`);
-        })
-
-        const parentElement = document.getElementById('parent');
-        buttonElement.addEventListener('click', function(e){
-            console.log('You clicked on my button!')
-            e.stopPropagation();
-        })
-        parentElement.addEventListener('click', function(e){
-            console.log('You clicked on the parent containing div.')
-        })
-
-        buttonElement.addEventListener('mouseover', function(e){
-            console.log('Your mouse is on the button')
-        });
-        buttonElement.addEventListener('mouseout', function(e){
-            console.log('Your mouse is no longer on the button')
-        });
-
-        inputElement.addEventListener('focus', function(e){
-            console.log('You focused on the input!')
-        });
-        inputElement.addEventListener('blur', function(e){
-            console.log('You stopped focusing on the input!')
-        });
-
-        document.addEventListener('keydown', function(e){
-            console.log(`You just hit the ${e.key} key`);
-        });
-</script>
+ <div class="container">
+     <div class="content">
+         <h1>Change Contents Notes</h1>
+            <div class="row">
+                <div>
+                    <label for="first">First Name</label>
+                    <input type="text" id="first" name="first_name" placeholder="Jane">
+                </div>
+            </div>
+     </div>
+ </div>
 </body>
 </html>
+
+
+<!--    <div id="parent">-->
+<!--        <input type="text" id="text1"/>-->
+<!--        <button id="button1">BUTTON</button>-->
+<!--    </div>-->
+<!--    <script>-->
+<!--        console.log('Hello console! - line 13');-->
+
+<!--        const inputElement = document.getElementById('text1');-->
+<!--        const buttonElement = document.getElementById('button1');-->
+
+<!--        inputElement.addEventListener('change', function(e){-->
+<!--            console.log(`The value you entered is ${e.target.value}`);-->
+<!--        })-->
+<!--        inputElement.addEventListener('input', function(e){-->
+<!--            console.log(`The value you just typed is ${e.target.value}`);-->
+<!--        })-->
+
+<!--        const parentElement = document.getElementById('parent');-->
+<!--        buttonElement.addEventListener('click', function(e){-->
+<!--            console.log('You clicked on my button!')-->
+<!--            e.stopPropagation();-->
+<!--        })-->
+<!--        parentElement.addEventListener('click', function(e){-->
+<!--            console.log('You clicked on the parent containing div.')-->
+<!--        })-->
+
+<!--        buttonElement.addEventListener('mouseover', function(e){-->
+<!--            console.log('Your mouse is on the button')-->
+<!--        });-->
+<!--        buttonElement.addEventListener('mouseout', function(e){-->
+<!--            console.log('Your mouse is no longer on the button')-->
+<!--        });-->
+
+<!--        inputElement.addEventListener('focus', function(e){-->
+<!--            console.log('You focused on the input!')-->
+<!--        });-->
+<!--        inputElement.addEventListener('blur', function(e){-->
+<!--            console.log('You stopped focusing on the input!')-->
+<!--        });-->
+
+<!--        document.addEventListener('keydown', function(e){-->
+<!--            console.log(`You just hit the ${e.key} key`);-->
+<!--        });-->
+<!--</script>-->
