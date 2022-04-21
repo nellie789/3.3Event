@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Say Hello</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden{
+            display:none;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -21,14 +26,29 @@
             </div>
             <button id="hello" style="width: 75px; height: 45px;">Say Hello</button>
         </div>
-        <p></p>
+        <p class="hidden"></p>
     </div>
 </div>
 <script>
     const helloButton = document.getElementById('hello');
+    const firstName = document.getElementById('first');
+    const lastName = document.getElementById('last');
+    const full = document.querySelector('p');
 
-    helloButton.addEventListener('click', function(){
+    function nameCreator(){
+        let first = firstName.value;
+        let last = lastName.value;
+        let fullName = `${first} ${last}`;
+        if (fullName.length>1){
+            full.classList.remove("hidden")
+        } else{
+            full.classList.add("hidden")
+        }
+        full.textContent = `Hello ${fullName}!`;
+    })
 
+    helloButton.addEventListener('click', function(e){
+        (nameCreator());
     });
 </script>
 </body>
