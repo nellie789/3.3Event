@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <button id="remove">Click Me</button>
+        <div>
+            <button id="colors">Click Here</button>
+        </div>
+    </div>
+</div>
+<script>
+    const removeButton = document.getElementById("remove");
+
+    removeButton.addEventListener('click', function(){
+        setTimeout(function(){
+            removeButton.remove();
+        }, 3000);
+    })
+
+
+</script>
+</body>
+</html>
