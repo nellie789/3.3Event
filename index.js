@@ -3,6 +3,11 @@ const score = document.querySelector('.score')
 
 buildBoard();
 
+score.addEventListener('click', function(e){
+    let score = 0;
+
+})
+
 let interval = setInterval(function(){
     addCard(cardList.children.length + 1)
 }, 2000);
